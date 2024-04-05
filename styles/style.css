@@ -183,6 +183,10 @@ header {
 /************************ MOBILE AND TABLET ****************************/
 
 @media (max-width: 991px) {
+    .hidden-md{
+        display: none !important;
+    }
+
     .banner-content{
         flex-direction: column;
     }

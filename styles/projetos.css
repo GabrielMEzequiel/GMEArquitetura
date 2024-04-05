@@ -10,7 +10,40 @@ header {
     background-color: var(--color-primary);
 }
 
-section {
+.section-header {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.section-title {
+    font-family: var(--font-title);
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    color: var(--color-primary);
+}
+
+.section-button {
+    font-family: var(--font-title);
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+    color: var(--color-primary);
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 2px solid var(--color-primary);
+    text-decoration: none;
+}
+
+.section-button:hover {
+    background-color: var(--color-primary);
+    color: whitesmoke;
+    opacity: 0.6;
+}
+
+.card-container {
     width: 100%;
     display: flex;
     box-sizing: border-box;
@@ -92,12 +125,33 @@ section {
     opacity: 0.6;;
 }
 
+.section-footer {
+    display: flex;
+}
+
+.section-footer .section-button {
+    display: none;
+}
+
 
 
 /************************ MOBILE AND TABLET ****************************/
 
 @media (max-width: 900px) {
-    
+    .section-footer .section-button {
+        display: block;
+        margin: auto;
+        margin-bottom: 40px;
+        font-family: var(--font-title);
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 20px;
+        color: var(--color-primary);
+        padding: 5px 20px;
+        border-radius: 20px;
+        border: 2px solid var(--color-primary);
+        text-decoration: none;
+    }
 }
 
 /******************************* TABLET ********************************/
@@ -111,7 +165,7 @@ section {
 /******************************* MOBILE ********************************/
 
 @media (max-width: 600px) {
-    section {
+    .card-container {
         padding: 30px 10px;
     }
 
