@@ -1,9 +1,21 @@
+body {
+    overflow-y: auto;
+}
+
 main {
-    padding: 100px 40px 40px;
+    padding-top: 60px;
 }
 
 header {
     background-color: var(--color-primary);
+}
+
+section {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    padding: 30px;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -11,7 +23,8 @@ header {
     box-sizing: border-box;
     background: whitesmoke;
     padding: 20px;
-    width: 300px;
+    margin: 10px;
+    width: calc(25% - 20px);
     border-radius: 20px;
 }
   
@@ -83,21 +96,26 @@ header {
 
 /************************ MOBILE AND TABLET ****************************/
 
-@media (max-width: 991px) {
+@media (max-width: 900px) {
     
 }
 
 /******************************* TABLET ********************************/
 
-@media (min-width: 768px) and (max-width: 991px) {
-    
+@media (min-width: 601px) and (max-width: 900px) {
+    .card {
+        width: calc(50% - 20px);
+    }
 }
 
 /******************************* MOBILE ********************************/
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
+    section {
+        padding: 30px 10px;
+    }
 
     .card {
-        width: 100%;
+        width: calc(100% - 20px);
     }
 }

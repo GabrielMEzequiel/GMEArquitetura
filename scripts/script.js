@@ -28,6 +28,5 @@ document.addEventListener('DOMContentLoaded', function() {
             contador = 0;
         }
     }
-
     setInterval(mudarTexto, 3000);
 });
