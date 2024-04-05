@@ -19,58 +19,32 @@
                 <a href="../">GMe</a>
             </div>
             <nav class="navbar hidden-sm">
-                <a href="./sobre">sobre</a>
-                <a class="active" href="./projetos">projetos</a>
+                <a href="../sobre">sobre</a>
+                <a class="active" href="#">projetos</a>
             </nav>
         </header>
 
         <main>
-            <section class="edificio residencial">
+            <div class="banner">
+                <div class="banner-image">
+                   <h1>projetos</h1>
+                </div>
+                <nav class="banner-navbar">
+                    <a id="btn-todos" class="active" href="#" onclick="exibirTodos()">todos</a>
+                    <a id="btn-residenciais" href="#" onclick="exibirResidenciais()">residenciais</a>
+                    <a id="btn-comerciais" href="#" onclick="exibirComerciais()">comerciais</a>
+                </nav>
+            </div>
+
+            <section class="residenciais">
                 <div class="section-header">
-                    <h1 class="section-title">edifícios residenciais</h1>
-                    <a class="section-button hidden-md" href="#">ver todos</a>
+                    <h1 class="section-title">residenciais</h1>
                 </div>
                 <div class="card-container">
                     <div class="card">
                         <div class="card-image">
                             <img src="../assets/projetos/belle-vue.png" alt="">
-                            <a href="#" class="card-save"><i class="fa-regular fa-bookmark"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-title">
-                                belle vue
-                            </p>
-                            <a href="#" class="card-button">ver projeto</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="../assets/projetos/belle-vue.png" alt="">
-                            <a href="#" class="card-save"><i class="fa-regular fa-bookmark"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-title">
-                                belle vue
-                            </p>
-                            <a href="#" class="card-button">ver projeto</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="../assets/projetos/belle-vue.png" alt="">
-                            <a href="#" class="card-save"><i class="fa-regular fa-bookmark"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-title">
-                                belle vue
-                            </p>
-                            <a href="#" class="card-button">ver projeto</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="../assets/projetos/belle-vue.png" alt="">
-                            <a href="#" class="card-save"><i class="fa-regular fa-bookmark"></i></a>
+                            <a href="#" class="card-save" onclick="saveProject()"><i class="fa-regular fa-bookmark"></i></a>
                         </div>
                         <div class="card-body">
                             <p class="card-title">
@@ -80,8 +54,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="section-footer">
-                    <a class="section-button" href="#">ver todos</a>
+            </section>
+
+            <section class="comerciais">
+                <div class="section-header">
+                    <h1 class="section-title">comerciais</h1>
+                </div>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="../assets/projetos/belle-vue.png" alt="">
+                            <a href="#" class="card-save" onclick="saveProject()"><i class="fa-regular fa-bookmark"></i></a>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">
+                                belle vue
+                            </p>
+                            <a href="#" class="card-button">ver projeto</a>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
@@ -90,6 +81,6 @@
 
         </footer>
 
-        <script src="./scripts/script.js"></script>
+        <script src="../scripts/script.js"></script>
     </body>
 </html>

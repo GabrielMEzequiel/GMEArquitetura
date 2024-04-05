@@ -2,12 +2,58 @@ body {
     overflow-y: auto;
 }
 
-main {
-    padding-top: 60px;
-}
-
 header {
     background-color: var(--color-primary);
+    position: sticky;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner-image {
+    background: url(../assets/background.png) no-repeat center;
+    padding: 100px 0;
+}
+.banner-image h1 {
+    font-family: var(--font-title);
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+    color: whitesmoke;
+    margin: 0;
+    width: 100%;
+}
+
+.banner-navbar {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+}
+
+.banner-navbar a {
+    line-height: 40px;
+    padding: 10px 20px;
+    margin: 0;
+    font-family: var(--font-title);
+    font-weight: bold;
+    color: whitesmoke;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.banner-navbar a:hover {
+    background-color: var(--color-highlight);
+}
+
+.banner-navbar a.active {
+    background-color: var(--color-highlight);
+}
+
+.banner-navbar a.active:hover {
+    opacity: 0.6;
 }
 
 .section-header {
@@ -23,24 +69,6 @@ header {
     font-weight: bold;
     margin: 0;
     color: var(--color-primary);
-}
-
-.section-button {
-    font-family: var(--font-title);
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 20px;
-    color: var(--color-primary);
-    padding: 5px 20px;
-    border-radius: 20px;
-    border: 2px solid var(--color-primary);
-    text-decoration: none;
-}
-
-.section-button:hover {
-    background-color: var(--color-primary);
-    color: whitesmoke;
-    opacity: 0.6;
 }
 
 .card-container {
@@ -76,7 +104,6 @@ header {
 }
   
 .card-save {
-    font-family: var(--font-body);
     font-size: 20px;
     color: var(--color-primary);
     text-align: center;
@@ -95,6 +122,16 @@ header {
   
 .card-save:hover {
     opacity: 1;
+}
+
+.card-save.saved{
+    color: whitesmoke;
+    background-color: var(--color-highlight);
+    opacity: 1;
+}
+
+.card-save.saved:hover {
+    opacity: 0.6;
 }
   
 .card-title {
@@ -125,33 +162,12 @@ header {
     opacity: 0.6;;
 }
 
-.section-footer {
-    display: flex;
-}
-
-.section-footer .section-button {
-    display: none;
-}
-
 
 
 /************************ MOBILE AND TABLET ****************************/
 
 @media (max-width: 900px) {
-    .section-footer .section-button {
-        display: block;
-        margin: auto;
-        margin-bottom: 40px;
-        font-family: var(--font-title);
-        font-size: 15px;
-        font-weight: bold;
-        line-height: 20px;
-        color: var(--color-primary);
-        padding: 5px 20px;
-        border-radius: 20px;
-        border: 2px solid var(--color-primary);
-        text-decoration: none;
-    }
+    
 }
 
 /******************************* TABLET ********************************/
