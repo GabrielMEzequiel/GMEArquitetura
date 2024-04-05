@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+:root {
+    --color-primary: #1C1C1C;
+    --color-secondary: #878E99;
+    --color-highlight: #f56e1b;
+    --color-background: #e9e9e9;
+
+    --font-title: "Major Mono Display", monospace;
+    --font-body: "Roboto", sans-serif;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: var(--font-title);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--color-background);
+    font-family: var(--font-body);
+    color: var(--color-primary);
+}
+
+header {
+    position: fixed;
+    display: flex;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0 10px;
+    width: 100%;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-title);
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    margin-left: -10px;
+    text-align: center;
+    width: 60px;
+}
+
+.hamburger .open, .close {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.hamburger .open:hover, .close:hover {
+    opacity: 0.6;
+}
+
+.logo a {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid transparent
+}
+
+.navbar a:hover {
+    border-color: white;
+}
+
+.navbar a.active {
+    border-color: white;
+}
+
+
+
+.background-image {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.banner-content{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.banner-content-box{
+    text-align: center;
+    height: auto;
+    width: auto;
+}
+
+.banner-content .rotative-text{
+    font-family: var(--font-title);
+    font-weight:700;
+    font-size: 3rem;
+}
+
+.banner-content .fixed-text{
+    font-family: var(--font-body);
+    font-weight: 400;
+    letter-spacing: 1px;
+    flex-direction: column;
+    font-size: 30px;
+    padding-top:20px ;
+    font-weight:500;
+    color: rgb(255, 255, 255,.8);
+
+}
+
+.social-media-links{
+    box-sizing: border-box;
+    height: 100vh;
+    position: absolute;
+    padding: 60px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.social-media{
+    color: white;
+    font-size:  30px;
+    opacity: .6;
+    margin: 10px;
+}
+.social-media:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.contact{
+    display: flex;
+    position: absolute;
+    width: 10%;
+    right: 0;
+    top: 0;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contactpic{
+    color: white;
+    margin:10px;
+    font-size: 30px;
+    opacity: 0.6;
+}
+
+.contactpic:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/************************ MOBILE AND TABLET ****************************/
+
+@media (max-width: 991px) {
+    .banner-content{
+        flex-direction: column;
+    }
+
+    .contact{
+        display: none;
+    }
+    
+    .social-media-links{
+        width: 100%;
+        bottom: 0;
+        padding: 10px;
+        height: auto;
+        flex-direction: row;
+    }
+
+    .header-content-box{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+/******************************* TABLET ********************************/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+}
+
+/******************************* MOBILE ********************************/
+
+@media (max-width: 767px) {
+
+    .hidden-sm{
+        display: none !important;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar {
+        display: block;
+        position: fixed;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 100%;
+        top: 60px;
+    }
+
+    .navbar a {
+        font-size: 30px;
+        margin-bottom: 20px;
+        border-bottom: 3px solid transparent;
+    }
+
+    .navbar a:hover {
+        border-color: white;
+    }
+
+    .logo {     
+        width: 100%;
+        text-align: center;
+    }
+
+    .social-media-links {
+        z-index: 2;
+    }
+}
