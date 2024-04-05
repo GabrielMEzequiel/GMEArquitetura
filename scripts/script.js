@@ -1,23 +1,22 @@
-document.addEventListener('DOMContentLoaded', function() {    
-    
-    const open = document.querySelector('.open')
-    const close = document.querySelector('.close')
-    const navbar = document.querySelector('.navbar')
-    const content = document.querySelector('.header-content')
+const open = document.querySelector('.open')
+const close = document.querySelector('.close')
+const navbar = document.querySelector('.navbar')
+const content = document.querySelector('.header-content')
 
-    function openSidebar() {
+function openSidebar() {
         open.classList.add("hidden")
         close.classList.remove("hidden")
         navbar.classList.remove("hidden-sm")
         content.classList.add("hidden-sm")
-    }
-    function closeSidebar() {
+}
+function closeSidebar() {
         open.classList.remove("hidden")
         close.classList.add("hidden")
         navbar.classList.add("hidden-sm")
         content.classList.remove("hidden-sm")
-    }
+}
 
+document.addEventListener('DOMContentLoaded', function() {  
     var textos = ["inspira", "transforma", "inova", "encanta"]
     var contador = 0
     const rotative = document.querySelector('.rotative-text')
