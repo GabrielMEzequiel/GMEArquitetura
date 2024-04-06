@@ -16,15 +16,24 @@ function closeSidebar() {
         banner.classList.remove("hidden-sm")
 }
 
-const save = document.querySelector(".card-save");
+const saves = document.querySelectorAll(".card-save")
 
-function saveProject() {
+saves.forEach(save => {
+    save.addEventListener("click", function(event) {
+        event.preventDefault()
+        saveProject(event)
+    });
+});
+
+function saveProject(event) {
+    const save = event.currentTarget
     if (save.classList.contains("saved")) {
-        save.classList.remove("saved");
+        save.classList.remove("saved")
     } else {
-        save.classList.add("saved");
+        save.classList.add("saved")
     }
 }
+
 
 const btnTodos = document.querySelector("#btn-todos");
 const btnComerciais = document.querySelector("#btn-comerciais");

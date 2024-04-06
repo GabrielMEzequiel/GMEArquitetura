@@ -4,24 +4,168 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="../assets/favicon.png">
-        <title>GME Arquitetura</title>
+        <title>GME | Sobre</title>
+        <script src="https://kit.fontawesome.com/75a885e5d5.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/sobre.css">
     </head>
     <body>
         <header>
+            <div class="hamburger">
+                <a class="open" href="#" onclick="openSidebar()"><i class="fa-solid fa-bars"></i></a>
+                <a class="close hidden" href="#" onclick="closeSidebar()"><i class="fa-solid fa-x"></i></a>
+            </div>
             <div class="logo">
                 <a href="../">GMe</a>
             </div>
-            <nav class="navbar">
+            <nav class="navbar hidden-sm">
                 <a class="active" href="#">sobre</a>
-                <a href="./servicos">serviços</a>
-                <a href="./projetos">projetos</a>
-                <a href="./contato">contato</a>
+                <a href="../projetos/">projetos</a>
             </nav>
         </header>
+
         <main>
-            Essa é a página Sobre
+            <img class="background-image" src="../assets/background.png" alt="background">
+            <div class="banner">
+                <div class="banner-image">
+                   <h1>sobre</h1>
+                </div>
+                <nav class="navbar banner-nav">
+                    <a class="active" href="#historia">história</a>
+                    <a href="#objetivos">objetivos</a>
+                    <a href="#localizacao">localização</a>
+                </nav>
+            </div>
+
+            <section>
+                <div id="historia" class="content">
+                    <h2>nossa história</h2>
+                    <p>
+                        A trajetória da GME Arquitetura teve início com o renomado arquiteto Gabriel Martins Ezequiel, um visionário cuja 
+                        jornada começou em Campinas. Inspirado pela rica cultura brasileira e sua formação acadêmica, Gabriel desenvolveu 
+                        um estilo inovador e eclético desde cedo. Sua paixão pela criação de espaços que não só atendiam a funcionalidade, 
+                        mas também se tornavam obras de arte, moldou sua visão para além das fronteiras convencionais da arquitetura.
+                    </p>
+                    <p>
+                        Desde os primeiros dias, Gabriel aspirava estabelecer um escritório de arquitetura que não apenas projetasse 
+                        edifícios, mas também contasse histórias e inspirasse pessoas em todo o mundo. Seu compromisso com a excelência e 
+                        a expressão única em cada projeto impulsionou a GME Arquitetura a ganhar reconhecimento global.
+                    </p>
+                    <p>
+                        Ao longo dos anos, Gabriel deixou sua marca em vários continentes, com obras icônicas que refletem as diversas 
+                        culturas e contextos locais. Dos arranha-céus imponentes às residências luxuosas e aos espaços públicos inovadores, 
+                        cada projeto da GME Arquitetura é uma manifestação única de criatividade e maestria técnica, capturando a essência 
+                        do lugar e elevando-o a um novo patamar.
+                    </p>
+                </div>
+            </section>
+
+            <div class="citacao">
+                <blockquote>
+                    <em>
+                        "Na arquitetura, encontramos a oportunidade de moldar o mundo ao nosso redor, transformando 
+                        simples espaços em experiências que inspiram e elevam o espírito humano."
+                    </em>    
+                </blockquote>
+                <p>
+                    - Gabriel Martins Ezequiel
+                </p>
+            </div>
+
+            <section>
+                <div id="objetivos" class="content">
+                    <h2>nosso objetivo</h2>
+                    <p>
+                        Na GME Arquitetura, acreditamos que a arquitetura vai além de simplesmente projetar edifícios; é sobre contar 
+                        histórias, expressar identidades e moldar ambientes que inspiram. Nosso objetivo é criar experiências 
+                        arquitetônicas únicas que refletem uma abordagem contemporânea, incorporando design sustentável, tecnologias 
+                        avançadas e uma compreensão profunda das necessidades e aspirações de nossos clientes.
+                    </p>
+                </div>
+
+                <div id="cards" class="content card-container">
+                    <div class="card">
+                        <i class="card-icon fa-solid fa-bullseye"></i>
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                missão
+                            </h2>
+                            <p class="card-description">
+                                Oferecer soluções arquitetônicas excepcionais que superem as expectativas de nossos clientes, criando 
+                                espaços que inspirem e enriqueçam a vida das pessoas. Buscamos constantemente a excelência, a inovação 
+                                e a criatividade em tudo o que fazemos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="card-middle" class="card">
+                        <i class="card-icon fa-solid fa-binoculars"></i>
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                visão
+                            </h2>
+                            <p class="card-description">
+                                Ser reconhecidos como líderes globais em arquitetura contemporânea, deixando nossa marca em projetos 
+                                ao redor do mundo. Buscamos ser inspiração e referência no setor, sempre mantendo nosso compromisso 
+                                com a qualidade, a integridade e a sustentabilidade.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <i class="card-icon fa-solid fa-handshake "></i>
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                valores
+                            </h2>
+                            <p class="card-description">
+                                Buscamos a <strong>excelência</strong> em tudo o que fazemos, sempre traendo <strong>inovação</strong> 
+                                em abordagens criativas para superar desafios e criar soluções únicas. Atuamos com <strong>honestidade, 
+                                    transparência e ética</strong> e comprometemo-nos com a <strong>sustentabilidade</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="localizacao" class="content">
+                    <h2>nossa localização</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d641.8785743398364!2d-46.663992760495816!3d-23.556777928615215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce582cf1f68d8b%3A0xe5f698647b48c3f1!2sR.%20da%20Consola%C3%A7%C3%A3o%2C%202632%20-%20Cerqueira%20C%C3%A9sar%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001416-000!5e0!3m2!1spt-BR!2sbr!4v1712431433332!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
         </main>
+
+        <footer>
+            <div class="footer-col">
+                <div class="logo">
+                    <a href="../">GMe</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>sobre</h4>
+                <ul>
+                    <li><a href="#historia">Nossa história</a></li>
+                    <li><a href="#objetivos">Nossos objetivos</a></li>
+                    <li><a href="#localizacao">Nossa localização</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>projetos</h4>
+                <ul>
+                    <li><a href="../projetos/">todos</a></li>
+                    <li><a href="../projetos/" onclick="exibirResidenciais()">residenciais</a></li>
+                    <li><a href="../projetos/" onclick="exibirComerciais()">comerciais</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>redes sociais</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram social-media"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook social-media"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter social-media"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin social-media"></i></a>
+                </div>
+            </div>
+       </footer>
 
         <script src="../scripts/script.js"></script>
     </body>

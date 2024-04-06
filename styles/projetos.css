@@ -3,8 +3,7 @@ body {
 }
 
 header {
-    background-color: var(--color-primary);
-    position: sticky;
+    position: absolute;
 }
 
 .banner {
@@ -12,7 +11,7 @@ header {
 }
 
 .banner-image {
-    background: url(../assets/background.png) no-repeat center;
+    background: url(../assets/background.png) no-repeat left;
     padding: 100px 0;
 }
 .banner-image h1 {
@@ -25,35 +24,11 @@ header {
     width: 100%;
 }
 
-.banner-navbar {
+.banner-nav {
     position: absolute;
     width: 100%;
     text-align: center;
-    padding: 10px;
     bottom: 0;
-}
-
-.banner-navbar a {
-    line-height: 40px;
-    padding: 10px 20px;
-    margin: 0;
-    font-family: var(--font-title);
-    font-weight: bold;
-    color: whitesmoke;
-    text-decoration: none;
-    border-radius: 20px;
-}
-
-.banner-navbar a:hover {
-    background-color: var(--color-highlight);
-}
-
-.banner-navbar a.active {
-    background-color: var(--color-highlight);
-}
-
-.banner-navbar a.active:hover {
-    opacity: 0.6;
 }
 
 .section-header {
@@ -87,6 +62,7 @@ header {
     margin: 10px;
     width: calc(25% - 20px);
     border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
   
 .card-image {
@@ -94,8 +70,7 @@ header {
     background-color: var(--color-highlight);
     width: 100%;
     height: fit-content;
-    border-radius: 20px;
-    
+    border-radius: 20px; 
 }
 
 .card img {
@@ -181,6 +156,11 @@ header {
 /******************************* MOBILE ********************************/
 
 @media (max-width: 600px) {
+
+    .banner-image {
+        padding: 100px 0 140px;
+    }
+
     .card-container {
         padding: 30px 10px;
     }

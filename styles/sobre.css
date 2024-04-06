@@ -1,0 +1,185 @@
+body {
+    overflow-y: auto;
+}
+
+section {
+    background-color: var(--color-background);
+    padding: 1px 0;
+}
+
+.background-image {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    position: fixed;
+    z-index: -1;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner-image {
+     background: url(../assets/background.png) no-repeat left;
+    padding: 100px 0;
+}
+.banner-image h1 {
+    font-family: var(--font-title);
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+    color: whitesmoke;
+    margin: 0;
+    width: 100%;
+}
+
+.banner-nav {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+}
+
+.content {
+    background-color: whitesmoke;
+    margin: 40px 10%;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.content h2 {
+    font-family: var(--font-title);
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+p {
+    font-family: var(--font-body);
+    font-size: 17px;
+    text-align: justify;
+    text-align-last: left;
+    text-indent: 40px;
+}
+
+.citacao {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    padding: 40px 20%;
+    margin: 0;
+    border-radius: 0;
+}
+
+.citacao blockquote {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+.citacao p {
+    text-align-last: center;
+    text-indent: 0;
+    margin: 20px 0 0;
+}
+
+#cards{
+    box-shadow: none;
+}
+
+.card-container {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.card {
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#card-middle {
+    margin: 0 40px;
+}
+
+.card-icon {
+    color: var(--color-highlight);
+    width: 100%;
+    text-align: center;
+    font-size: 100px;
+}
+.card-title {
+    margin: 20px 0;
+}
+.card-description {
+    text-indent: 0;
+    margin: 0;
+}
+
+iframe {
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+
+/************************ MOBILE AND TABLET ****************************/
+
+@media (max-width: 1000px) {
+    .card-container {
+        flex-wrap: wrap;
+    }
+    
+    .card {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+/******************************* TABLET ********************************/
+
+@media (min-width: 601px) and (max-width: 1000px) {
+    #card-middle {
+        margin: 40px 0;
+    }
+}
+
+/******************************* MOBILE ********************************/
+
+@media (max-width: 600px) {
+
+    .banner-image {
+        padding: 100px 0 140px;
+    }
+
+    .content {
+        margin: 40px 20px;
+        padding: 20px;
+    }
+
+    h2 {
+        margin: 20px 0 40px;
+    }
+
+    .citacao {
+        padding: 40px;
+    }
+
+    .card-container {
+        padding: 0;
+    }
+    .card {
+        margin: 0;
+    }
+    #card-middle {
+        margin: 20px 0;
+    }
+}

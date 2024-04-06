@@ -3,7 +3,7 @@
 :root {
     --color-primary: #1C1C1C;
     --color-secondary: #878E99;
-    --color-highlight: #00a6ed;
+    --color-highlight: #f56e1b;
     --color-background: #e9e9e9;
 
     --font-title: "Major Mono Display", monospace;
@@ -33,7 +33,7 @@ body {
 }
 
 header {
-    position: fixed;
+    position: absolute;
     display: flex;
     z-index: 2;
     box-sizing: border-box;
@@ -66,38 +66,49 @@ header {
 .logo a {
     font-size: 40px;
     color: whitesmoke;
+    font-family: var(--font-title);
+    font-weight: bold;
     text-align: center;
     line-height: 60px;
     text-decoration: none;
 }
 
 .navbar {
-    display: flex;
+    display: absolute;
+    padding: 10px;
 }
 
 .navbar a {
-    display: block;
+    line-height: 40px;
     padding: 10px 20px;
+    margin: 0;
+    font-family: var(--font-title);
+    font-weight: bold;
     color: whitesmoke;
     text-decoration: none;
-    border-bottom: 2px solid transparent
+    border-radius: 20px;
 }
 
 .navbar a:hover {
-    border-color: whitesmoke;
+    background-color: var(--color-highlight);
 }
 
 .navbar a.active {
-    border-color: whitesmoke;
+    background-color: var(--color-highlight);
+}
+
+.navbar a.active:hover {
+    opacity: 0.6;
 }
 
 
 
-.background-image {
+.background-video {
     height: 100vh;
     width: 100%;
     object-fit: cover;
     object-position: top;
+    z-index: -1;
 }
 
 .banner-content{
@@ -119,6 +130,7 @@ header {
     font-family: var(--font-title);
     font-weight:700;
     font-size: 3rem;
+    opacity: 1;
 }
 
 .banner-content .fixed-text{
@@ -130,7 +142,7 @@ header {
     padding-top:20px ;
     font-weight:500;
     color: rgb(255, 255, 255,.8);
-
+    opacity: 1;
 }
 
 .social-media-links{
@@ -146,14 +158,18 @@ header {
     z-index: 1;
 }
 .social-media{
+    width: 50px;
+    height: 50px;
     color: whitesmoke;
     font-size:  30px;
+    line-height: 50px;
+    text-align: center;
     opacity: .6;
-    margin: 10px;
 }
 .social-media:hover{
+    background-color: var(--color-highlight);
     opacity: 1;
-    transform: scale(1.1);
+    border-radius: 50px;
 }
 
 .contact{
@@ -166,19 +182,75 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: 1;
 }
 
 .contactpic{
+    width: 50px;
+    height: 50px;
     color: whitesmoke;
-    margin:10px;
-    font-size: 30px;
-    opacity: 0.6;
+    font-size:  30px;
+    line-height: 50px;
+    text-align: center;
+    opacity: .6;
 }
 
 .contactpic:hover{
+    background-color: var(--color-highlight);
     opacity: 1;
-    transform: scale(1.1);
+    border-radius: 50px;
 }
+
+
+footer{
+    background-color: var(--color-primary);
+    color: whitesmoke;
+    padding: 40px 10%;
+    display: flex;
+	flex-wrap: wrap;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 20px;
+   box-sizing: border-box;
+}
+footer .logo a{
+    font-size: 60px;
+}
+.footer-col h4{
+	font-size: 20px;
+    font-family: var(--font-title);
+    padding-bottom: 10px;
+	margin: 0 0 20px;
+	font-weight: bold;
+	position: relative;
+    border-bottom: 2px solid var(--color-highlight);
+}
+.footer-col ul{
+	list-style: none;
+    margin:0;
+	padding:0;
+}
+.footer-col ul li a{
+	line-height: 40px;
+    padding: 10px 20px;
+    margin: 0;
+    font-family: var(--font-title);
+    font-weight: bold;
+	text-transform: lowercase;
+    color: whitesmoke;
+    text-decoration: none;
+    border-radius: 20px;
+}
+.footer-col ul li a:hover{
+	background-color: var(--color-highlight);
+}
+
+
+
+
+
+
 
 /************************ MOBILE AND TABLET ****************************/
 
@@ -212,7 +284,10 @@ header {
 /******************************* TABLET ********************************/
 
 @media (min-width: 768px) and (max-width: 991px) {
-    
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
 }
 
 /******************************* MOBILE ********************************/
@@ -227,24 +302,7 @@ header {
         display: block;
     }
 
-    .navbar {
-        display: block;
-        position: fixed;
-        padding: 20px;
-        box-sizing: border-box;
-        height: 100%;
-        top: 60px;
-    }
-
-    .navbar a {
-        font-size: 30px;
-        margin-bottom: 20px;
-        border-bottom: 3px solid transparent;
-    }
-
-    .navbar a:hover {
-        border-color: whitesmoke;
-    }
+    
 
     .logo {     
         width: 100%;
@@ -253,5 +311,13 @@ header {
 
     .social-media-links {
         z-index: 2;
+    }
+
+    footer {
+        padding: 40px 20px;
+    }
+    .footer-col{
+        width: 100%;
+        margin-bottom: 40px;
     }
 }
