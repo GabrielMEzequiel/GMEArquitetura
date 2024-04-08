@@ -152,10 +152,65 @@ header {
 
 
 
+
+.content {
+    background-color: whitesmoke;
+    margin: 40px 10%;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.content img {
+    border-radius: 20px;
+}
+
+.container {
+    margin: 100px 10% 40px;
+    display: flex;
+}
+
+.container .content {
+    margin: 0;
+    width: 100%;
+}
+
+.container .content:first-child {
+    margin-right: 40px;
+}
+
+.container:last-child{
+    margin: 0 10% 40px;
+}
+
+.container:last-child .content:last-child{
+    width: 40%;
+}
+
+
 /************************ MOBILE AND TABLET ****************************/
 
 @media (max-width: 900px) {
-    
+    .container {
+        flex-wrap: wrap;
+    }
+    .container .content:first-child {
+        margin: 0;
+        margin-bottom: 40px;
+    }
+    .container:last-child .content:last-child{
+        width: 100%;
+    }
+    .galeria {
+        display: flex;
+    }
+    .galeria img{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .galeria img:first-child {
+        margin-right: 20px;
+    }
 }
 
 /******************************* TABLET ********************************/
