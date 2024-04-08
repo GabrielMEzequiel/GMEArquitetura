@@ -16,12 +16,24 @@ section {
     z-index: -1;
 }
 
+.hamburger .open, .close {
+    color: whitesmoke;
+}
+
+.logo a {
+    color: whitesmoke;
+}
+
+.navbar a{
+    color: whitesmoke;
+}
+
 .banner {
     position: relative;
 }
 
 .banner-image {
-     background: url(../assets/background.png) no-repeat left;
+     background: url("../assets/banner.png") no-repeat top;
     padding: 100px 0;
 }
 .banner-image h1 {
@@ -115,10 +127,9 @@ p {
     width: 100%;
     text-align: center;
     font-size: 100px;
+    margin-bottom: 20px;
 }
-.card-title {
-    margin: 20px 0;
-}
+
 .card-description {
     text-indent: 0;
     margin: 0;
@@ -165,7 +176,7 @@ iframe {
         padding: 20px;
     }
 
-    h2 {
+    .content h2 {
         margin: 20px 0 40px;
     }
 

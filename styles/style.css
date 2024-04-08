@@ -55,7 +55,7 @@ header {
 
 .hamburger .open, .close {
     font-size: 30px;
-    color: whitesmoke;
+    color: var(--color-primary);
     text-decoration: none;
 }
 
@@ -65,7 +65,7 @@ header {
 
 .logo a {
     font-size: 40px;
-    color: whitesmoke;
+    color: var(--color-primary);
     font-family: var(--font-title);
     font-weight: bold;
     text-align: center;
@@ -84,17 +84,19 @@ header {
     margin: 0;
     font-family: var(--font-title);
     font-weight: bold;
-    color: whitesmoke;
+    color: var(--color-primary);
     text-decoration: none;
     border-radius: 20px;
 }
 
 .navbar a:hover {
     background-color: var(--color-highlight);
+    color: whitesmoke;
 }
 
 .navbar a.active {
     background-color: var(--color-highlight);
+    color: whitesmoke;
 }
 
 .navbar a.active:hover {
@@ -103,7 +105,7 @@ header {
 
 
 
-.background-video {
+.background-image {
     height: 100vh;
     width: 100%;
     object-fit: cover;
@@ -118,7 +120,7 @@ header {
     position: absolute;
     align-items: center;
     justify-content: center;
-    color: whitesmoke;
+    color: var(--color-primary);
 }
 .banner-content-box{
     text-align: center;
@@ -128,6 +130,7 @@ header {
 
 .banner-content .rotative-text{
     font-family: var(--font-title);
+    color: var(--color-highlight);
     font-weight:700;
     font-size: 3rem;
     opacity: 1;
@@ -141,7 +144,6 @@ header {
     font-size: 30px;
     padding-top:20px ;
     font-weight:500;
-    color: rgb(255, 255, 255,.8);
     opacity: 1;
 }
 
@@ -160,7 +162,7 @@ header {
 .social-media{
     width: 50px;
     height: 50px;
-    color: whitesmoke;
+    color: var(--color-primary);
     font-size:  30px;
     line-height: 50px;
     text-align: center;
@@ -168,6 +170,7 @@ header {
 }
 .social-media:hover{
     background-color: var(--color-highlight);
+    color: whitesmoke;
     opacity: 1;
     border-radius: 50px;
 }
@@ -188,7 +191,7 @@ header {
 .contactpic{
     width: 50px;
     height: 50px;
-    color: whitesmoke;
+    color: var(--color-primary);
     font-size:  30px;
     line-height: 50px;
     text-align: center;
@@ -197,6 +200,7 @@ header {
 
 .contactpic:hover{
     background-color: var(--color-highlight);
+    color: whitesmoke;
     opacity: 1;
     border-radius: 50px;
 }
@@ -246,7 +250,9 @@ footer .logo a{
 	background-color: var(--color-highlight);
 }
 
-
+footer .social-media {
+    color: whitesmoke;
+}
 
 
 

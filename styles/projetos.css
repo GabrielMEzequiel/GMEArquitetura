@@ -6,12 +6,24 @@ header {
     position: absolute;
 }
 
+.hamburger .open, .close {
+    color: whitesmoke;
+}
+
+.logo a {
+    color: whitesmoke;
+}
+
+.navbar a{
+    color: whitesmoke;
+}
+
 .banner {
     position: relative;
 }
 
 .banner-image {
-    background: url(../assets/background.png) no-repeat left;
+    background: url(../assets/banner.png) no-repeat left;
     padding: 100px 0;
 }
 .banner-image h1 {
