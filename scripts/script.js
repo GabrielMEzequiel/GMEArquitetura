@@ -1,19 +1,25 @@
 const open = document.querySelector(".open")
 const close = document.querySelector(".close")
 const navbar = document.querySelector(".navbar")
-const banner = document.querySelector(".banner-content")
+const logo = document.querySelector("#logo")
+const background = document.querySelector(".background-image")
+const banner = document.querySelector(".banner-image")
 
 function openSidebar() {
-        open.classList.add("hidden")
-        close.classList.remove("hidden")
-        navbar.classList.remove("hidden-sm")
-        banner.classList.add("hidden-sm")
+        open.classList.add("hidden");
+        close.classList.remove("hidden");
+        navbar.classList.remove("hidden-sm");
+        logo.classList.add("black-sm");
+        background.classList.add("hidden-sm");
+        banner.classList.add("background-sm");
 }
 function closeSidebar() {
         open.classList.remove("hidden")
         close.classList.add("hidden")
         navbar.classList.add("hidden-sm")
-        banner.classList.remove("hidden-sm")
+        logo.classList.remove("black-sm")
+        background.classList.remove("hidden-sm")
+        banner.classList.remove("background-sm")
 }
 
 const saves = document.querySelectorAll(".card-save")

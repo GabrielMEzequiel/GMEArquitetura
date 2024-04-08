@@ -1,5 +1,6 @@
 body {
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 header {
@@ -23,7 +24,7 @@ header {
 }
 
 .banner-image {
-    background: url(../assets/banner.png) no-repeat left;
+    background: url("../assets/banner.png") no-repeat left;
     padding: 100px 0;
 }
 .banner-image h1 {

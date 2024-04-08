@@ -1,5 +1,6 @@
 body {
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 section {
@@ -8,12 +9,7 @@ section {
 }
 
 .background-image {
-    height: 100vh;
-    width: 100%;
-    object-fit: cover;
-    object-position: top;
     position: fixed;
-    z-index: -1;
 }
 
 .hamburger .open, .close {
@@ -33,7 +29,7 @@ section {
 }
 
 .banner-image {
-     background: url("../assets/banner.png") no-repeat top;
+     background: url("../assets/banner.png") no-repeat left;
     padding: 100px 0;
 }
 .banner-image h1 {
