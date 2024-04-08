@@ -10,16 +10,16 @@ function openSidebar() {
         close.classList.remove("hidden");
         navbar.classList.remove("hidden-sm");
         logo.classList.add("black-sm");
-        background.classList.add("hidden-sm");
         banner.classList.add("background-sm");
+        background.classList.add("hidden-sm");
 }
 function closeSidebar() {
         open.classList.remove("hidden")
         close.classList.add("hidden")
         navbar.classList.add("hidden-sm")
         logo.classList.remove("black-sm")
-        background.classList.remove("hidden-sm")
         banner.classList.remove("background-sm")
+        background.classList.remove("hidden-sm")
 }
 
 const saves = document.querySelectorAll(".card-save")

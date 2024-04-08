@@ -351,6 +351,14 @@ footer .social-media {
         color: var(--color-primary);
     }
 
+    .social-media-links {
+        background-image: linear-gradient(to bottom, transparent, black);
+    }
+
+    .social-media {
+        color: whitesmoke;
+    }
+
     footer {
         padding: 40px 20px;
     }
