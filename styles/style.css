@@ -17,6 +17,9 @@ html {
 .hidden {
     display: none !important;
 }
+.primary {
+    background-color: var(--color-primary) !important;
+}
 
 .button {
     padding: 10px 20px;
@@ -310,8 +313,8 @@ footer .social-media {
     .background-sm {
         background: var(--color-background) !important;
     }
-    .black-sm {
-        color: var(--color-primary) !important;
+    .whitesmoke {
+        color: whitesmoke !important;
     }
 
     .hidden-sm{
@@ -345,10 +348,6 @@ footer .social-media {
     .logo {     
         width: 100%;
         text-align: center;
-    }
-
-    .close i{
-        color: var(--color-primary);
     }
 
     .social-media-links {

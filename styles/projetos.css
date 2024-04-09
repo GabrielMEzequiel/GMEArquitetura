@@ -38,6 +38,7 @@ header {
 }
 
 .banner-nav {
+    box-sizing: border-box;
     position: absolute;
     width: 100%;
     text-align: center;
@@ -174,6 +175,10 @@ header {
     border-radius: 20px;
 }
 
+.content video {
+    border-radius: 20px;
+}
+
 .content a {
     border: 2px solid var(--color-secondary);
     color: var(--color-secondary);
@@ -248,11 +253,6 @@ header {
 .galeria img {
     width: 100%;
     margin-bottom: 20px;
-    cursor: pointer;
-}
-
-.galeria img:hover {
-    scale: 1.05;
 }
 
 .galeria div {

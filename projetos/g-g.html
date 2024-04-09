@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../assets/favicon.png">
+        <title>GME | Casa G.G</title>
+        <script src="https://kit.fontawesome.com/75a885e5d5.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/projetos.css">
+        <link rel="stylesheet" href="../styles/page-projeto.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="hamburger">
+                <a class="open" href="#" onclick="openSidebar()"><i class="fa-solid fa-bars"></i></a>
+                <a class="close hidden" href="#" onclick="closeSidebar()"><i class="fa-solid fa-x"></i></a>
+            </div>
+            <div class="logo">
+                <a id="logo" href="../">GMe</a>
+            </div>
+            <nav class="navbar hidden-sm">
+                <a href="../sobre">sobre</a>
+                <a href="./">projetos</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container">
+                <section class="content">
+                    <a href="./"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+                    <h1>casa g.g</h1>
+                    <h3>Residencial</h3>
+                    <video class="banner" src="../assets/projetos/g-g/video.mp4" poster="../assets/projetos/g-g/banner-lg.png" autoplay controls></video>
+                    <h2>descrição</h2>
+                    <p>
+                        Este sobrado é um testemunho da harmonia entre forma e função, onde cada detalhe foi meticulosamente pensado 
+                        para criar um ambiente que inspira calma e elegância. Com uma fusão sublime de elementos naturais e design 
+                        moderno, esta residência é verdadeiramente uma obra-prima arquitetônica. 
+                    </p>   
+                    <p>    
+                        A entrada principal revela um espaço acolhedor e convidativo, onde a luz natural flui livremente através de 
+                        uma grande janela de vidro, iluminando os ambientes internos com uma aura serena. A sala de estar dá as 
+                        boas-vindas aos visitantes, enquanto uma escadaria elegante conduz ao andar superior.
+                    </p>   
+                    <p>  
+                        A sala de estar é um oásis de conforto, com sua paleta de cores suaves e mobiliário luxuoso que convida ao 
+                        relaxamento. O home theater oferece uma experiência cinematográfica incrível, onde os amantes do cinema podem 
+                        se perder em filmes enquanto desfrutam do conforto. 
+                    </p>   
+                    <p> 
+                        A sala de jantar, banhada pela luz suave do entardecer, é o cenário perfeito para encontros memoráveis e 
+                        deliciosas refeições. A cozinha gourmet, equipada com os mais recentes aparelhos e acabamentos de alta 
+                        qualidade, é um paraíso para os entusiastas da culinária, onde cada prato é preparado com amor e precisão. 
+                    </p>   
+                    <p> 
+                        No exterior, um jardim exuberante envolve a casa, proporcionando um refúgio tranquilo para os moradores. 
+                        Uma piscina reluzente, cercada por decks de madeira, convida a momentos de lazer e relaxamento sob o sol 
+                        cintilante. O jardim, cuidadosamente paisagístico, é um cenário de serenidade, onde árvores frondosas 
+                        criam uma atmosfera de paz e tranquilidade. 
+                    </p>   
+                    <p> 
+                        Os materiais atemporais, como madeira, pedra, concreto e cimento, são empregados com maestria em toda a casa, 
+                        conferindo-lhe uma sensação de permanência e sofisticação. Os interiores são adornados com acabamentos de alta 
+                        qualidade e detalhes artesanais, elevando o luxo a um novo nível de excelência. 
+                    </p>
+                    <h2>especificações</h2>
+                    <table>
+                        <tr>
+                            <th><i class="fa-solid fa-ruler-combined"></i> Área</th>
+                            <td>280 m<sup>2</sup></td>
+                        </tr>
+                        <tr>
+                            <th><i class="fa-solid fa-calendar"></i> Ano</th>
+                            <td>2021</td>
+                        </tr>
+                        <tr>
+                            <th><i class="fa-solid fa-people-group"></i> Arquitetos</th>
+                            <td>Gabriel Martins Ezequiel</td>
+                        </tr>
+                        <tr>
+                            <th><i class="fa-solid fa-location-dot"></i> Localização</th>
+                            <td>Ribeirão Preto/SP</td>
+                        </tr>
+                    </table>
+                </section>
+                <section class="content">
+                    <h2>galeria</h2>
+                    <div class="galeria">
+                        <div>
+                            <img src="../assets/projetos/g-g/fachada.png" alt="">
+                            <img src="../assets/projetos/g-g/sala-estar.png" alt="">
+                        </div>
+                        <div>
+                            <img src="../assets/projetos/g-g/jardim.png" alt="">
+                            <img src="../assets/projetos/g-g/home-theater.png" alt="">
+                        </div>
+                        <div>
+                            <img src="../assets/projetos/g-g/sala-jantar.png" alt="">
+                            <img src="../assets/projetos/g-g/cozinha.png" alt="">
+                        </div>
+                        <div>
+                            <img src="../assets/projetos/g-g/piscina.png" alt="">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-col">
+                <div class="logo">
+                    <a href="../">GMe<sub>©</sub></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>sobre</h4>
+                <ul>
+                    <li><a href="#historia">Nossa história</a></li>
+                    <li><a href="#objetivos">Nossos objetivos</a></li>
+                    <li><a href="#localizacao">Nossa localização</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>projetos</h4>
+                <ul>
+                    <li><a href="../projetos/">todos</a></li>
+                    <li><a href="../projetos/" onclick="exibirResidenciais()">residenciais</a></li>
+                    <li><a href="../projetos/" onclick="exibirComerciais()">comerciais</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>redes sociais</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram social-media"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook social-media"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter social-media"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin social-media"></i></a>
+                </div>
+            </div>
+        </footer>
+        <script src="../scripts/script.js"></script>
+    </body>
+</html>
