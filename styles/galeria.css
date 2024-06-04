@@ -45,66 +45,6 @@ header {
     bottom: 0;
 }
 
-.custom-select {
-    position: relative;
-  }
-  
-  .custom-select select {
-    display: none;
-  }
-  
-  .select-selected {
-    background-color: var(--color-highlight);
-    font-family: var(--font-title);
-    font-weight: bold;
-    color: whitesmoke !important;
-    text-decoration: none;
-    border-radius: 20px;
-  }
-  
-  .select-selected:after {
-    position: absolute;
-    content: "";
-    top: 14px;
-    right: 10px;
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-color: whitesmoke transparent transparent transparent;
-  }
-  
-  .select-selected.select-arrow-active:after {
-    border-color: transparent transparent whitesmoke transparent;
-    top: 7px;
-  }
-  
-  .select-items div,.select-selected {
-    color: var(--color-primary);
-    padding: 8px 16px;
-    border: 1px solid transparent;
-    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-    cursor: pointer;
-  }
-  
-  .select-items {
-    position: absolute;
-    background-color: whitesmoke;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    border-radius: 20px;
-  }
-
-  .select-hide {
-    display: none;
-  }
-  
-  .select-items div:hover, .same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-
-
 .dropbtn {
     background-color: transparent;
     color: white;
@@ -117,13 +57,41 @@ header {
     border-radius: 20px;
 }
   
-.dropbtn:hover, .dropbtn.selected {
-    background-color: var(--color-highlight);
+.dropbtn:hover, .selected {
+    background-color: var(--color-highlight) !important;
+    color: whitesmoke;
+}
+
+#corPredefinida {
+    padding: 0;
+}
+
+#corPredefinida button {
+    width: 100%;
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-secondary);
+}
+
+#corPredefinida button:hover {
+    background-color: var(--color-background);
+}
+
+#corPredefinida button:first-child {
+    border-radius: 20px 20px 0 0;
+}
+
+#corPredefinida button:last-child {
+    border-radius: 0 0 20px 20px;
+    border: none;
 }
   
 .dropdown {
     position: relative;
     display: inline-block;
+    color: var(--color-primary);
 }
   
 .dropdown-content {
@@ -146,7 +114,7 @@ header {
     border-radius: 20px;
 }
 .dropdown-content .slider {
-    -webkit-appearance: none;
+    appearance: none;
     border-radius: 20px;
 }
 
@@ -183,10 +151,11 @@ header {
     background: linear-gradient(to right, black, hsl(9, 100%, 50%), white);
 }
 
-.changeButton {
+#corPersonalizada button.changeButton {
     background-color: var(--color-highlight);
+    width: initial;
     color: whitesmoke;
-    padding: 10px 11px;
+    padding: 10px 18px;
     margin: 20px 10px 0 0;
     font-family: var(--font-title);
     font-weight: bolder;
@@ -195,14 +164,15 @@ header {
     cursor: pointer;
     border-radius: 20px;
 }
-.changeButton:hover {
+#corPersonalizada button.changeButton:hover {
     opacity: 0.8;
 }
 
-.closeButton {
+#corPersonalizada button.closeButton {
     background-color: transparent;
+    width: initial;
     color: var(--color-highlight);
-    padding: 10px 11px;
+    padding: 10px 18px;
     margin-top: 20px;
     font-family: var(--font-title);
     font-weight: bolder;
@@ -211,7 +181,7 @@ header {
     cursor: pointer;
     border-radius: 20px;
 }
-.closeButton:hover {
+#corPersonalizada button.closeButton:hover {
     background-color: var(--color-highlight);
     color: whitesmoke;
 }
