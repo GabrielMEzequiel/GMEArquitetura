@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../assets/favicon.png">
+        <title>GME | Galeria</title>
+        <script src="https://kit.fontawesome.com/75a885e5d5.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/galeria.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="hamburger">
+                <a class="open" href="#" onclick="openSidebar()"><i class="fa-solid fa-bars"></i></a>
+                <a class="close hidden" href="#" onclick="closeSidebar()"><i class="fa-solid fa-x"></i></a>
+            </div>
+            <div class="logo">
+                <a id="logo" href="../index.html">GMe</a>
+            </div>
+            <nav class="navbar hidden-sm">
+                <a href="../sobre/index.html">sobre</a>
+                <a href="../projetos/index.html">projetos</a>
+                <a class="active" href="#">galeria</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="banner">
+                <div class="banner-image">
+                   <h1>galeria</h1>
+                </div>
+                <nav class="navbar banner-nav">
+                    <div class="custom-select">
+                        <select>
+                            <option value="0">cor predefinida</option>
+                            <option value="1">branco</option>
+                            <option value="2">preto</option>
+                            <option value="3">azul</option>
+                            <option value="4">verde</option>
+                            <option value="5">vermelho</option>
+                            <option value="6">amarelo</option>
+                        </select>
+                    </div>
+                    <div class="dropdown">
+                        <button onclick="openDropdown()" class="dropbtn">cor personalizada</button>
+                        <div id="dropdown" class="dropdown-content"> 
+                            <div>
+                                <input type="radio" id="rgb" name="colorFormat" value="0" checked>
+                                <label for="rgb">RGB</label>   
+                                <input type="radio" id="hex" name="colorFormat" value="1">
+                                <label for="hex">HEX</label>
+                                <input type="radio" id="hsl" name="colorFormat" value="2">
+                                <label for="hsl">HSL</label>
+                            </div>
+                            <div>
+                                <input type="text" id="color" value="rgb(233, 233, 233)">
+                            </div>
+                            <div class="rgbSliders">
+                                <label class="rgbLabel" for="red">R</label>
+                                <input class="slider rgbSlider" type="range" id="red" name="rgb" min="0" max="255" value="233">
+                                <output class="output rgbOutput" for="red"></output>
+                                <br>
+                                <label class="rgbLabel" for="green">G</label>
+                                <input class="slider rgbSlider" type="range" id="green" name="rgb" min="0" max="255" value="233">
+                                <output class="output rgbOutput" for="green"></output>
+                                <br>
+                                <label class="rgbLabel" for="blue">B</label>
+                                <input class="slider rgbSlider" type="range" id="blue" name="rgb" min="0" max="255" value="233">
+                                <output class="output rgbOutput" for="blue"></output>
+                            </div>
+                            <div class="hslSliders">
+                                <label class="hslLabel" for="hue">H</label>
+                                <input class="slider hslSlider" type="range" id="hue" name="hsl" min="1" max="360" value="0">
+                                <output class="output hslOutput" for="hue">0</output>
+                                <br>
+                                <label class="hslLabel" for="saturation">S</label>
+                                <input class="slider hslSlider" type="range" id="saturation" name="hsl" min="0" max="100" value="0">
+                                <output class="output hslOutput" for="saturation">0%</output>
+                                <br>
+                                <label class="hslLabel" for="lightness">L</label>
+                                <input class="slider hslSlider" type="range" id="lightness" name="hsl" min="0" max="100" value="91">
+                                <output class="output hslOutput" for="lightness">91%</output>
+                            </div>
+                            <div>
+                                <button class="changeButton" onclick="changeBackground()">alterar</button>
+                                <button class="closeButton" onclick="openDropdown()">cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </main>
+
+        <script src="../scripts/script.js"></script>
+    </body>
+</html>
