@@ -280,4 +280,37 @@ function getTextColor(r, g, b) {
     return luminance > 0.5 ? 'black' : 'white';
 }
 
-    
+const imagens = [
+    "../assets/projetos/g-g/cozinha.png",
+    "../assets/projetos/g-g/fachada.png",
+    "../assets/projetos/g-g/home-theater.png",
+    "../assets/projetos/g-g/jardim.png",
+    "../assets/projetos/g-g/piscina.png",
+    "../assets/projetos/g-g/sala-estar.png",
+    "../assets/projetos/g-g/sala-jantar.png",
+    "../assets/projetos/petrus/fachada.png",
+    "../assets/projetos/petrus/gourmet.png",
+    "../assets/projetos/petrus/jardim.png",
+    "../assets/projetos/petrus/piscina.png"
+];
+let inicio = 0;
+
+function atualizarImagens() {
+
+}
+function rodarCarrossel(direcao) {
+    if(direcao == "right") {
+        if (inicio++ > imagens.length) {
+            inicio = 0;
+        } else {
+            inicio++;
+        }
+    } else {
+        if (inicio-- < 0) {
+            inicio = (imagens.length)-1;
+        } else {
+            inicio--;
+        }
+    }
+    console.log(inicio);
+}
