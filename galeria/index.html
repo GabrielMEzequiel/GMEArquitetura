@@ -6,6 +6,7 @@
         <link rel="icon" href="../assets/favicon.png">
         <title>GME | Galeria</title>
         <script src="https://kit.fontawesome.com/75a885e5d5.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
         <link rel="stylesheet" href="../styles/style.css">
         <link rel="stylesheet" href="../styles/galeria.css">
     </head>
@@ -35,13 +36,12 @@
                         <button onclick="openDropdown(0)" class="dropbtn btnPredefinida">alterar cor do fundo</button>
                         <div id="corPredefinida" class="dropdown-content"> 
                             <div>
-                                <button onclick="changeBackground(0, 'var(--color-background)')">Padrão</button>
-                                <button onclick="changeBackground(0, 'white')">Branco</button>
-                                <button onclick="changeBackground(0, 'black')">Preto</button>
-                                <button onclick="changeBackground(0, 'blue')">Azul</button>
-                                <button onclick="changeBackground(0, 'green')">Verde</button>
-                                <button onclick="changeBackground(0, 'red')">Vermelho</button>
-                                <button onclick="changeBackground(0, 'yellow')">Amarelo</button>
+                                <button onclick="changeBackground(0, 'var(--color-background)', 'var(--color-primary)')">Padrão</button>
+                                <button onclick="changeBackground(0, 'white', 'var(--color-primary)')">Branco</button>
+                                <button onclick="changeBackground(0, 'black', 'whitesmoke')">Preto</button>
+                                <button onclick="changeBackground(0, 'blue', 'whitesmoke')">Azul</button>
+                                <button onclick="changeBackground(0, 'green', 'whitesmoke')">Verde</button>
+                                <button onclick="changeBackground(0, 'red', 'whitesmoke')">Vermelho</button>
                                 <button onclick="openDropdown(1)" class="btnPersonalizada">Cor personalizada</button>
                             </div>
                             <div id="corPersonalizada" class="dropdown-content"> 
@@ -92,37 +92,79 @@
                     </div>
                 </nav>
             </div>
-<!-- 
-            <section class="carrossel">
-                <button><i class="fa-solid fa-arrow-left"></i></button>
-                <img class="small" src="../assets/projetos/petrus/jardim.png" alt="">
-                <img class="large" src="../assets/projetos/petrus/jardim.png" alt="">
-                <img class="large" src="../assets/projetos/petrus/jardim.png" alt="">
-                <img class="small" src="../assets/projetos/petrus/jardim.png" alt="">
-                <button><i class="fa-solid fa-arrow-right"></i></button>
-            </section>
-            <section class="descricoes">
+
+            <div class="galeria">
+                <button class="seta esquerda" onclick="moverEsquerda()"><span class="material-symbols-outlined">arrow_back_ios</span></button>
+                <div class="imagensGaleria">
+                    <img class="imagemGaleria pequena img1" onclick="moverEsquerda()">
+                    <img class="imagemGaleria grande img2" onclick="moverEsquerda()">
+                    <img class="imagemGaleria grande img3" onclick="moverDireita()">
+                    <img class="imagemGaleria pequena img4" onclick="moverDireita()">
+                </div>
+                <button class="seta direita" onclick="moverDireita()"><span class="material-symbols-outlined">arrow_forward_ios</span></button>
+            </div>
+            <div class="setasMobile">
+                <button class="seta esquerda" onclick="moverEsquerda()"><span class="material-symbols-outlined">arrow_back_ios</span></button>
+                <button class="seta direita" onclick="moverDireita()"><span class="material-symbols-outlined">arrow_forward_ios</span></button>
+            </div>
+            <div class="descricoesImagem">
                 <table>
-                    <tr>
-                        <th>Imagem 1:</th>
-                        <td id="descricao1">Descrição da imagem 1</td> 
+                    <tr class="img1">
+                        <th class="indiceImagem"></th>
+                        <td class="descricaoImagem"></td> 
                     </tr>
-                    <tr>
-                        <th>Imagem 2:</th>
-                        <td id="descricao2">Descrição da imagem 2</td> 
+                    <tr class="img2">
+                        <th class="indiceImagem"></th>
+                        <td class="descricaoImagem"></td> 
                     </tr>
-                    <tr>
-                        <th>Imagem 3:</th>
-                        <td id="descricao3">Descrição da imagem 3</td> 
+                    <tr class="img3">
+                        <th class="indiceImagem"></th>
+                        <td class="descricaoImagem"></td> 
                     </tr>
-                    <tr>
-                        <th>Imagem 4:</th>
-                        <td id="descricao4">Descrição da imagem 4</td> 
+                    <tr class="img4">
+                        <th class="indiceImagem"></th>
+                        <td class="descricaoImagem"></td> 
                     </tr>
                 </table>
-            </section> -->
+            </div>
+
         </main>
 
-        <script src="../scripts/script.js"></script>
+        <footer>
+            <div class="footer-col">
+                <div class="logo">
+                    <a href="../index.html">GMe<sub>©</sub></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>sobre</h4>
+                <ul>
+                    <li><a href="../sobre/index.html#historia">Nossa história</a></li>
+                    <li><a href="../sobre/index.html#objetivos">Nossos objetivos</a></li>
+                    <li><a href="../sobre/index.html#localizacao">Nossa localização</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>projetos</h4>
+                <ul>
+                    <li><a href="../projetos/index.html">todos</a></li>
+                    <li><a href="../projetos/index.html" onclick="exibirResidenciais()">residenciais</a></li>
+                    <li><a href="../projetos/index.html" onclick="exibirComerciais()">comerciais</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>redes sociais</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram social-media"></i></a>
+                    <a href="https://www.facebook.com"><i class="fa-brands fa-facebook social-media"></i></a>
+                    <a href="https://www.x.com"><i class="fa-brands fa-x-twitter social-media"></i></a>
+                    <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin social-media"></i></a>
+                </div>
+            </div>
+        </footer>
+        
+        <script src="../scripts/header.js"></script>
+        <script src="../scripts/mudarFundo.js"></script>
+        <script src="../scripts/carrossel.js"></script>
     </body>
 </html>

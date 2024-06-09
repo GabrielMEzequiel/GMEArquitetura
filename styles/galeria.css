@@ -189,60 +189,131 @@ header {
   
 .show {display:block;}
 
-.carrossel button {
-    margin: 0;
-    width: 5%;
-}
-.carrossel img {
-    margin: 0;
-}
-img.small {
-    width: 15%;
-}
-img.large {
-    width: 30%;
+
+
+.galeria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
 }
 
+.setasMobile {display: none;}
 
+.seta {
+    background-color: transparent;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
 
+.seta:hover {
+    transform: scale(1.5);
+}
 
+.esquerda {
+    margin-right: 30px;
+}
 
+.direita {
+    margin-left: 30px;
+}
+
+.imagensGaleria {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.imagemGaleria {
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: transform 0.3s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.imagemGaleria:hover {
+    transform: scale(1.1);
+}
+
+.pequena {
+    width: calc(20% - 20px);
+}
+
+.grande {
+    width: calc(30% - 20px);
+}
+
+.descricoesImagem {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.link {
+    color: var(--color-highlight);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+.descricoesImagem table {
+    border-collapse: collapse;
+}
+.descricoesImagem th, td {
+    padding: 10px;
+    border-bottom: 1px solid var(--color-secondary);
+}
+.descricoesImagem tr:last-child th, tr:last-child td {
+    border: none;
+}
 
 /************************ MOBILE AND TABLET ****************************/
 
 @media (max-width: 900px) {
-    .container {
-        flex-wrap: wrap;
-    }
-    .container .content:first-child {
-        margin: 0;
-        margin-bottom: 40px;
-    }
-    .container .content:last-child{
-        width: 100%;
-    }
+    
     .galeria {
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 0;
     }
-    .galeria div {
+    .imagensGaleria  {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
     }
-    .galeria img{
-        width: calc(50% - 10px);
+    .setasMobile {
+        display: block;
+        text-align: center;
+        margin: 20px;
     }
-    .galeria img:first-child {
-        margin-right: 20px;
+    .esquerda {
+        margin-right: 10px;
+    }
+    
+    .direita {
+        margin-left: 10px;
     }
 }
 
 /******************************* TABLET ********************************/
 
 @media (min-width: 601px) and (max-width: 900px) {
-    .card {
+    
+    .imagemGaleria{
+        margin: 10px;
         width: calc(50% - 20px);
+    }
+    .galeria .seta, .img1, .img4 {
+        display: none;
+    }
+    .img3 th, .img3 td {
+        border: none;
     }
 }
 
@@ -254,26 +325,19 @@ img.large {
         padding: 100px 0 140px;
     }
 
-    .card-container {
-        padding: 30px 10px;
+    .galeria {
+        margin: 20px;
     }
 
-    .card {
+    .imagemGaleria{
         width: calc(100% - 20px);
     }
-    .container {
-        margin: 100px 20px 40px;
+
+    .galeria .seta, .img1, .img2, .img3 {
+        display: none;
     }
-    .content {
-        padding: 20px;
-    }
-    .content:last-child h2 {
-        margin: 20px 0 40px;
-    }
-    .galeria img{
-        width: 100%;
-    }
-    .galeria img:first-child {
-        margin-right: 0;
+
+    .descricoesImagem {
+        margin: 20px;
     }
 }

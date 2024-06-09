@@ -1,99 +1,3 @@
-const open = document.querySelector(".open")
-const close = document.querySelector(".close")
-const navbar = document.querySelector(".navbar")
-const logo = document.querySelector("#logo")
-const background = document.querySelector(".background-image")
-const banner = document.querySelector(".banner-image")
-const header = document.querySelector(".header")
-
-function openSidebar() {
-        open.classList.add("hidden")
-        close.classList.remove("hidden")
-        navbar.classList.remove("hidden-sm")
-        header.classList.add("primary")
-        logo.classList.add("whitesmoke")
-        close.classList.add("whitesmoke")
-}
-function closeSidebar() {
-        open.classList.remove("hidden")
-        close.classList.add("hidden")
-        navbar.classList.add("hidden-sm")
-        header.classList.remove("primary")
-        logo.classList.remove("whitesmoke")
-        close.classList.remove("whitesmoke")
-}
-
-const saves = document.querySelectorAll(".card-save")
-
-saves.forEach(save => {
-    save.addEventListener("click", function(event) {
-        event.preventDefault()
-        saveProject(event)
-    });
-});
-
-function saveProject(event) {
-    const save = event.currentTarget
-    save.classList.toggle("saved");
-}
-
-
-const btnTodos = document.querySelector("#btn-todos");
-const btnComerciais = document.querySelector("#btn-comerciais");
-const btnResidenciais = document.querySelector("#btn-residenciais");
-
-const comerciais = document.querySelector(".comerciais");
-const residenciais = document.querySelector(".residenciais");
-
-function exibirTodos() {
-    comerciais.classList.remove("hidden")
-    residenciais.classList.remove("hidden")
-    btnTodos.classList.add("active")
-    btnComerciais.classList.remove("active")
-    btnResidenciais.classList.remove("active")
-}
-
-function exibirComerciais() {
-    comerciais.classList.remove("hidden")
-    residenciais.classList.add("hidden")
-    btnTodos.classList.remove("active")
-    btnComerciais.classList.add("active")
-    btnResidenciais.classList.remove("active")
-}
-
-function exibirResidenciais() {
-    comerciais.classList.add("hidden")
-    residenciais.classList.remove("hidden")
-    btnTodos.classList.remove("active")
-    btnComerciais.classList.remove("active")
-    btnResidenciais.classList.add("active")
-}
-
-
-document.addEventListener("DOMContentLoaded", function() {  
-    var textos = ["inspira", "transforma", "inova", "encanta"]
-    var contador = 0
-    const rotative = document.querySelector(".rotative-text")
-
-    function mudarTexto() {
-        rotative.innerHTML = textos[contador]
-        contador++;
-        if (contador >= textos.length) {
-            contador = 0;
-        }
-    }
-    setInterval(mudarTexto, 3000);
-});
-
-function closeAllSelect() {
-    openDropdown(1);
-    openDropdown(2);
-}
-
-document.addEventListener("click", closeAllSelect());
-
-
-
 function openDropdown(indice) {
     if (indice == 0) {
         document.querySelector("#corPredefinida").classList.toggle("show");
@@ -266,51 +170,20 @@ function hslToRgb(h, s, l) {
     return { r: Math.round(r * 255), g: Math.round(g * 255), b: Math.round(b * 255) };
 }
 
-updateSliders();
-updateColor();
-
-function changeBackground(indice, backgroundColor = color.value) {
-    openDropdown(indice)
+function changeBackground(indice, backgroundColor = color.value, colorText = textColor) {
+    openDropdown(indice);
+    
     document.body.style.backgroundColor = backgroundColor;
-    document.body.style.color = textColor;
+    document.body.style.color = colorText;
+    document.querySelectorAll(".seta").forEach( function(seta) {
+       seta.style.color = colorText; 
+    })
 }
 
 function getTextColor(r, g, b) {
     let luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-    return luminance > 0.5 ? 'black' : 'white';
+    return luminance > 0.5 ? 'var(--color-primary)' : 'whitesmoke';
 }
 
-const imagens = [
-    "../assets/projetos/g-g/cozinha.png",
-    "../assets/projetos/g-g/fachada.png",
-    "../assets/projetos/g-g/home-theater.png",
-    "../assets/projetos/g-g/jardim.png",
-    "../assets/projetos/g-g/piscina.png",
-    "../assets/projetos/g-g/sala-estar.png",
-    "../assets/projetos/g-g/sala-jantar.png",
-    "../assets/projetos/petrus/fachada.png",
-    "../assets/projetos/petrus/gourmet.png",
-    "../assets/projetos/petrus/jardim.png",
-    "../assets/projetos/petrus/piscina.png"
-];
-let inicio = 0;
-
-function atualizarImagens() {
-
-}
-function rodarCarrossel(direcao) {
-    if(direcao == "right") {
-        if (inicio++ > imagens.length) {
-            inicio = 0;
-        } else {
-            inicio++;
-        }
-    } else {
-        if (inicio-- < 0) {
-            inicio = (imagens.length)-1;
-        } else {
-            inicio--;
-        }
-    }
-    console.log(inicio);
-}
+updateSliders();
+updateColor();
