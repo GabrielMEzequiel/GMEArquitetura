@@ -31,66 +31,6 @@
                 <div class="banner-image">
                    <h1>galeria</h1>
                 </div>
-                <nav class="navbar banner-nav">
-                    <div class="dropdown">
-                        <button onclick="openDropdown(0)" class="dropbtn btnPredefinida">alterar cor do fundo</button>
-                        <div id="corPredefinida" class="dropdown-content"> 
-                            <div>
-                                <button onclick="changeBackground(0, 'var(--color-background)', 'var(--color-primary)')">Padrão</button>
-                                <button onclick="changeBackground(0, 'white', 'var(--color-primary)')">Branco</button>
-                                <button onclick="changeBackground(0, 'black', 'whitesmoke')">Preto</button>
-                                <button onclick="changeBackground(0, 'blue', 'whitesmoke')">Azul</button>
-                                <button onclick="changeBackground(0, 'green', 'whitesmoke')">Verde</button>
-                                <button onclick="changeBackground(0, 'red', 'whitesmoke')">Vermelho</button>
-                                <button onclick="openDropdown(1)" class="btnPersonalizada">Cor personalizada</button>
-                            </div>
-                            <div id="corPersonalizada" class="dropdown-content"> 
-                                <div>
-                                    <input type="radio" id="rgb" name="colorFormat" value="0" checked>
-                                    <label for="rgb">RGB</label>   
-                                    <input type="radio" id="hex" name="colorFormat" value="1">
-                                    <label for="hex">HEX</label>
-                                    <input type="radio" id="hsl" name="colorFormat" value="2">
-                                    <label for="hsl">HSL</label>
-                                </div>
-                                <div>
-                                    <input type="text" id="color" value="rgb(233, 233, 233)">
-                                </div>
-                                <div class="rgbSliders">
-                                    <label class="rgbLabel" for="red">R</label>
-                                    <input class="slider rgbSlider" type="range" id="red" name="rgb" min="0" max="255" value="233">
-                                    <output class="output rgbOutput" for="red"></output>
-                                    <br>
-                                    <label class="rgbLabel" for="green">G</label>
-                                    <input class="slider rgbSlider" type="range" id="green" name="rgb" min="0" max="255" value="233">
-                                    <output class="output rgbOutput" for="green"></output>
-                                    <br>
-                                    <label class="rgbLabel" for="blue">B</label>
-                                    <input class="slider rgbSlider" type="range" id="blue" name="rgb" min="0" max="255" value="233">
-                                    <output class="output rgbOutput" for="blue"></output>
-                                </div>
-                                <div class="hslSliders">
-                                    <label class="hslLabel" for="hue">H</label>
-                                    <input class="slider hslSlider" type="range" id="hue" name="hsl" min="1" max="360" value="0">
-                                    <output class="output hslOutput" for="hue">0</output>
-                                    <br>
-                                    <label class="hslLabel" for="saturation">S</label>
-                                    <input class="slider hslSlider" type="range" id="saturation" name="hsl" min="0" max="100" value="0">
-                                    <output class="output hslOutput" for="saturation">0%</output>
-                                    <br>
-                                    <label class="hslLabel" for="lightness">L</label>
-                                    <input class="slider hslSlider" type="range" id="lightness" name="hsl" min="0" max="100" value="91">
-                                    <output class="output hslOutput" for="lightness">91%</output>
-                                </div>
-                                <div>
-                                    <button class="changeButton" onclick="changeBackground(1)">alterar</button>
-                                    <button class="closeButton" onclick="openDropdown(1)">cancelar</button>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </nav>
             </div>
 
             <div class="galeria">
@@ -164,7 +104,6 @@
         </footer>
         
         <script src="../scripts/header.js"></script>
-        <script src="../scripts/mudarFundo.js"></script>
         <script src="../scripts/carrossel.js"></script>
     </body>
 </html>
